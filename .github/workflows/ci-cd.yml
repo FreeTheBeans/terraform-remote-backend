@@ -1,0 +1,20 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  ci-workflow:
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit
+
+  cd-workflow:
+    name: Terraform Deploy
+    needs: ci-workflow
+    uses: ./.github/workflows/terraform_deploy.yml
+    secrets: inherit
