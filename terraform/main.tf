@@ -3,10 +3,10 @@ terraform {
   required_version = ">= 1.0.0"
   backend "s3" {
     //IMPORTANT - Names below must match names in env_vars/local_vars.tfvars
-    bucket         = "craft-beer-db-terraform-backend"
-    key            = "craftdb/backend/terraform.tfstate"
+    bucket         = "free-the-beans-terraform-backend"
+    key            = "free-the-beans/backend/terraform.tfstate"
     region         = "eu-west-1"
-    dynamodb_table = "craft-beer-db-terraform-lock"
+    dynamodb_table = "free-the-beans-db-terraform-lock"
   }
 }
 
