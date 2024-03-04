@@ -1,5 +1,5 @@
 
-ENV_VARS_DIR := env_vars
+ENV_VARS_DIR := env-vars
 ENV := prod
 
 .PHONY tf_setup:

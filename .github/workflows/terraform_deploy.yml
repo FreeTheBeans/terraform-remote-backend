@@ -35,8 +35,8 @@ jobs:
 
       - name: Terraform Plan
         working-directory: ${{ env.WORKING_DIRECTORY }}
-        run: make  tf_plan
+        run: make tf_plan
 
       - name: Terraform Apply
         working-directory: ${{ env.WORKING_DIRECTORY }}
-        run: make  tf_apply
+        run: make tf_apply
