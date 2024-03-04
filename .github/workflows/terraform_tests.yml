@@ -2,11 +2,6 @@ name: Terraform Tests
 
 on:
   workflow_call: 
-    inputs:
-      DB_INSTANCE_NAME:
-        description: 'DB Instance Name'
-        required: true
-        type: string
 
 env:
   WORKING_DIRECTORY: './terraform'
